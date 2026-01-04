@@ -100,7 +100,7 @@ const Portfolio = () => {
           </div>
           <motion.h2 className="text-2xl md:text-5xl font-black tracking-[0.3em] uppercase opacity-20 mt-4">KAMATAGI</motion.h2>
           <div className="mt-12">
-            <a href="/resume.pdf" download className="group bg-blue-600 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:scale-105 transition-all inline-flex items-center gap-2">
+            <a href="resume.pdf" download="Bhavana_Kamatagi_Resume.pdf" className="group bg-blue-600 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:scale-105 transition-all inline-flex items-center gap-2">
               <Download size={16} /> Download Resume
             </a>
           </div>
