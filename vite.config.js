@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/portpolio/', // ADD THIS LINE
+  base: '/a/', // Updated to match repo name 'a'
 })
