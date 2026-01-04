@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
-import { 
-  Github, Linkedin, Mail, Moon, Sun, Trophy, Star, 
-  Code, Download, User, Briefcase, Image as ImageIcon, ArrowUpRight, Globe, Database 
+import {
+  Github, Linkedin, Mail, Moon, Sun, Trophy, Star,
+  Code, Download, User, Briefcase, Image as ImageIcon, ArrowUpRight, Globe, Database
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -15,7 +15,7 @@ const Portfolio = () => {
     const interval = setInterval(() => {
       setMagicVisible(false);
       setTimeout(() => setMagicVisible(true), 2000);
-    }, 6000); 
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -48,13 +48,13 @@ const Portfolio = () => {
   const galleryItems = [
     { title: "Yoga & Mindfulness", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800" },
     { title: "Vocal Arts / Singing", img: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800" },
-    { title: "Nature", img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" }, 
+    { title: "Nature", img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" },
     { title: "Software Development", img: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800" }
   ];
 
   return (
     <div className={`${isDarkMode ? 'bg-[#050505] text-white' : 'bg-slate-50 text-slate-900'} min-h-screen transition-colors duration-700 font-sans scroll-smooth selection:bg-blue-600`}>
-      
+
       <motion.div className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-[100] origin-left" style={{ scaleX }} />
 
       {/* 1. NAVBAR WITH ICONS */}
@@ -114,8 +114,8 @@ const Portfolio = () => {
           <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} className="md:col-span-5 relative group">
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-[40px] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
             <div className="relative aspect-square rounded-[40px] overflow-hidden border border-white/10">
-            <img src="https://lh3.googleusercontent.com/d/1zXvcFVN7fDzU_vFaliaG6Mv6OzXX8K8f" className="relative rounded-2xl w-full grayscale hover:grayscale-0 transition-all duration-500" alt="About" />
-           </div>
+              <img src="/profile.jpg" className="relative rounded-2xl w-full grayscale hover:grayscale-0 transition-all duration-500" alt="About" />
+            </div>
           </motion.div>
           <div className="md:col-span-7">
             <h3 className="text-5xl font-black uppercase tracking-tighter mb-6 italic text-blue-600">Creative Architect</h3>
@@ -123,9 +123,9 @@ const Portfolio = () => {
               I am a developer who bridges the gap between complex backend logic and pixel-perfect frontend design. Based in India, I focus on creating interfaces that tell a story and feel like magic.
             </p>
             <div className="flex flex-wrap gap-4">
-               {["Yoga", "Singing", "AI Research"].map(item => (
-                 <span key={item} className="px-6 py-2 bg-white/5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest italic">{item}</span>
-               ))}
+              {["Yoga", "Singing", "AI Research"].map(item => (
+                <span key={item} className="px-6 py-2 bg-white/5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest italic">{item}</span>
+              ))}
             </div>
           </div>
         </div>
@@ -174,13 +174,13 @@ const Portfolio = () => {
         <div className="grid md:grid-cols-2 gap-10">
           {galleryItems.map((item, i) => (
             <motion.div key={i} whileHover={{ scale: 1.02 }} className="relative rounded-[50px] overflow-hidden aspect-video border border-white/10 group cursor-pointer">
-              <a  target="_blank" rel="noreferrer">
+              <a target="_blank" rel="noreferrer">
                 <img src={item.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt={item.title} />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                   <div className="text-center">
-                     <p className="text-white font-black uppercase text-xl">{item.title}</p>
-                     <ArrowUpRight className="mx-auto mt-2 text-blue-400" />
-                   </div>
+                  <div className="text-center">
+                    <p className="text-white font-black uppercase text-xl">{item.title}</p>
+                    <ArrowUpRight className="mx-auto mt-2 text-blue-400" />
+                  </div>
                 </div>
               </a>
             </motion.div>
@@ -193,11 +193,11 @@ const Portfolio = () => {
         <div className="max-w-5xl mx-auto bg-blue-600 rounded-[60px] p-20 text-center relative overflow-hidden shadow-2xl">
           <h3 className="text-5xl md:text-[90px] font-black uppercase tracking-tighter mb-10 text-white italic">Let's Connect.</h3>
           <div className="flex flex-wrap justify-center gap-6">
-             <a href="mailto:bhavanask60@gmail.com" className="bg-white text-black px-12 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:scale-110 transition-all">Email Me</a>
-             <div className="flex gap-4">
-                <a href="https://github.com/Bha-nu12" target="_blank" rel="noreferrer" className="p-5 bg-black text-white rounded-full hover:bg-zinc-900 transition-all shadow-xl"><Github /></a>
-                <a href="https://www.linkedin.com/in/bhavana-kamatagi-bb633b281" target="_blank" rel="noreferrer" className="p-5 bg-black text-white rounded-full hover:bg-zinc-900 transition-all shadow-xl"><Linkedin /></a>
-             </div>
+            <a href="mailto:bhavanask60@gmail.com" className="bg-white text-black px-12 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:scale-110 transition-all">Email Me</a>
+            <div className="flex gap-4">
+              <a href="https://github.com/Bha-nu12" target="_blank" rel="noreferrer" className="p-5 bg-black text-white rounded-full hover:bg-zinc-900 transition-all shadow-xl"><Github /></a>
+              <a href="https://www.linkedin.com/in/bhavana-kamatagi-bb633b281" target="_blank" rel="noreferrer" className="p-5 bg-black text-white rounded-full hover:bg-zinc-900 transition-all shadow-xl"><Linkedin /></a>
+            </div>
           </div>
         </div>
       </section>
