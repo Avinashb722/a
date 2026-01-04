@@ -114,7 +114,7 @@ const Portfolio = () => {
           <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} className="md:col-span-5 relative group">
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-[40px] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
             <div className="relative aspect-square rounded-[40px] overflow-hidden border border-white/10">
-              <img src="/profile.jpg" className="relative rounded-2xl w-full grayscale hover:grayscale-0 transition-all duration-500" alt="About" />
+              <img src="profile.jpg" className="relative rounded-2xl w-full grayscale hover:grayscale-0 transition-all duration-500" alt="About" />
             </div>
           </motion.div>
           <div className="md:col-span-7">
